@@ -5,15 +5,9 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 	"time"
 )
-
-func compare(a, b string) bool {
-	fmt.Print("\nComparing:\n", a, b, a == b, "\n")
-	fmt.Println(a, len(a))
-	fmt.Println(b, len(b))
-	return a == b
-}
 
 func convertSeconds(seconds int) string {
 	if seconds < 0 {
@@ -27,7 +21,22 @@ func convertSeconds(seconds int) string {
 }
 
 func main() {
-	p := fmt.Println
+	inputPath := "input.txt"
+	dat, err := os.ReadFile(inputPath)
+	if err != nil {
+		log.Panic()
+	}
+	commands := map[string]string{}
+	inputLines := strings.Split(string(dat), "\n")
+	for _, line := range inputLines {
+		command := strings.Split(line, "=")
+		if len(command) != 2 {
+			log.Panic("Invalid input:", command)
+		}
+		commands[command[0]] = command[1]
+	}
+
+	p := fmt.Print
 
 	f, err := os.Create("result.txt")
 	if err != nil {
@@ -35,16 +44,17 @@ func main() {
 	}
 
 	now := time.Now()
-	fmt.Println("===Starting Timestamper===")
+	p("\n===Starting TimeStamper===\n")
 	offset := 2
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		input := scanner.Text()
-		comp := "t"
-		if input == comp {
+		description, ok := commands[input]
+		if ok {
 			timeStamp := convertSeconds(-(int(time.Until(now).Seconds()) + offset))
-			p(timeStamp, " - ", "sucess")
-			f.WriteString(fmt.Sprintln(timeStamp, " - ", "sucess"))
+			output := fmt.Sprintln(timeStamp, " - ", description)
+			p(output)
+			f.WriteString(output)
 		}
 
 		if input == "exit" {
