@@ -44,6 +44,12 @@ func main() {
 	}
 
 	now := time.Now()
+	p("COMMANDS:\n")
+	for k, v := range commands {
+		fmt.Println(k, ":", v)
+	}
+	fmt.Println("exit", ":", "exits program")
+
 	p("\n===Starting TimeStamper===\n")
 	offset := 2
 	scanner := bufio.NewScanner(os.Stdin)
