@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
 	"time"
 )
@@ -28,17 +29,22 @@ func convertSeconds(seconds int) string {
 func main() {
 	p := fmt.Println
 
+	f, err := os.Create("result.txt")
+	if err != nil {
+		log.Panic()
+	}
+
 	now := time.Now()
 	fmt.Println("===Starting Timestamper===")
-
+	offset := 2
 	scanner := bufio.NewScanner(os.Stdin)
-
 	for scanner.Scan() {
 		input := scanner.Text()
-		comp := "a"
+		comp := "t"
 		if input == comp {
-			timeStamp := convertSeconds(-int(time.Until(now).Seconds()))
+			timeStamp := convertSeconds(-(int(time.Until(now).Seconds()) + offset))
 			p(timeStamp, " - ", "sucess")
+			f.WriteString(fmt.Sprintln(timeStamp, " - ", "sucess"))
 		}
 
 		if input == "exit" {
