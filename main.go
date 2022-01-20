@@ -51,7 +51,7 @@ func main() {
 	fmt.Println("exit", ":", "exits program")
 
 	p("\n===Starting TimeStamper===\n")
-	offset := 2
+	offset := 3
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		input := scanner.Text()
