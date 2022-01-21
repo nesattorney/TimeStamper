@@ -1,0 +1,7 @@
+c=close slash
+s=6S
+b=bandit revolver
+t=throw
+r=round start
+w=wall break
+g=gunflame

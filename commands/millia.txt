@@ -1,0 +1,9 @@
+d=disc oki
+f=far oki
+c=close slash
+w=wall break
+r=round start
+j=jump
+t=throw
+i=iron savior oki
+x=DELETE

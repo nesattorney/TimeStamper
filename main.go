@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"log"
 	"os"
@@ -16,6 +17,8 @@ type Config struct {
 	PlaybackStartTime int64   `json:"PlaybackStartTime"`
 }
 
+var cmdPath = flag.String("c", "commands/millia.txt", "Path to command file")
+
 func convertSeconds(seconds int) string {
 	if seconds < 0 {
 		seconds = 0
@@ -28,10 +31,11 @@ func convertSeconds(seconds int) string {
 }
 
 func main() {
-	inputPath := "input.txt"
-	dat, err := os.ReadFile(inputPath)
+	flag.Parse()
+	fmt.Printf("\n===Using commands from path: %s ===\n", *cmdPath)
+	dat, err := os.ReadFile(*cmdPath)
 	if err != nil {
-		log.Panic()
+		log.Panic("Invalid command path")
 	}
 	commands := map[string]string{}
 	inputLines := strings.Split(string(dat), "\n")
