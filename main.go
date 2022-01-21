@@ -69,6 +69,7 @@ func main() {
 	fmt.Println("exit", ":", "exits program")
 
 	p("\n===Starting TimeStamper===\n")
+	fmt.Printf("\nStart Time: %s Playback Speed: %.2f Buffer: %d sec\n", convertSeconds(int(cfg.PlaybackStartTime)), cfg.PlaybackSpeed, cfg.TimestampBuffer)
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		input := scanner.Text()
