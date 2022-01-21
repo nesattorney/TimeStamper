@@ -2,12 +2,19 @@ package main
 
 import (
 	"bufio"
+	"encoding/json"
 	"fmt"
 	"log"
 	"os"
 	"strings"
 	"time"
 )
+
+type Config struct {
+	PlaybackSpeed     float64 `json:"PlaybackSpeed"`
+	TimestampBuffer   int64   `json:"TimestampBuffer"`
+	PlaybackStartTime int64   `json:"PlaybackStartTime"`
+}
 
 func convertSeconds(seconds int) string {
 	if seconds < 0 {
@@ -35,6 +42,17 @@ func main() {
 		}
 		commands[command[0]] = command[1]
 	}
+	configPath := "config.json"
+	cfgDat, err := os.ReadFile(configPath)
+	if err != nil {
+		log.Panic()
+	}
+
+	var cfg Config
+	err = json.Unmarshal(cfgDat, &cfg)
+	if err != nil {
+		log.Panic()
+	}
 
 	p := fmt.Print
 
@@ -51,13 +69,18 @@ func main() {
 	fmt.Println("exit", ":", "exits program")
 
 	p("\n===Starting TimeStamper===\n")
-	offset := 3
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		input := scanner.Text()
 		description, ok := commands[input]
 		if ok {
-			timeStamp := convertSeconds(-(int(time.Until(now).Seconds()) + offset))
+			//Actual time from start
+			currentTime := -int(time.Until(now).Seconds())
+			//Adjust time passed based on playback speed
+			currentTimePlayback := int(float32(currentTime) * float32(cfg.PlaybackSpeed))
+			//Adjust time to reflect playback start time and timestamp buffer
+			adjustedTime := currentTimePlayback + int(cfg.PlaybackStartTime) - int(cfg.TimestampBuffer)
+			timeStamp := convertSeconds(adjustedTime)
 			output := fmt.Sprintln(timeStamp, " - ", description)
 			p(output)
 			f.WriteString(output)
