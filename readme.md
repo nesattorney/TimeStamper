@@ -1,14 +1,19 @@
-Example input file
+# ReplayTimeStamper
 
-t=disc oki
-s=far oki
-r=close slash
-a=wall break
-f=DELETE
+Writes youtube timestamps based on key presses. 
 
-TODO
-Add timestamp offset config
-Add start time offset
-Add playback speed support
-add pause?
-add config file
+Key press output is configured in the keyCommands directory.
+
+See keyCommands directory for examples.
+
+# To run
+Inside the replayTimeStamper directory, write "go run ."
+
+Use in tandem with Videobookmarker to register key presses with timestamp within youtube. 
+
+Get Videobookmarker here: https://github.com/Forgetfulisak/videobookmarker
+
+# Flags
+c : decides key command file to read keybindings from
+b : Timestamp buffer
+d : Output destination
