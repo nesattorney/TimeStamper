@@ -19,28 +19,6 @@ type ReplayTimeStamper struct {
 	Exit       chan bool
 }
 
-type KeyEvent struct {
-	Title    string  `json:"title"`
-	Timestep float64 `json:"timestep"`
-	Key      string  `json:"key"`
-}
-
-var KeyCmdPathFlag = flag.String("c", "millia.txt", "Key command filename")
-var bufferFlag = flag.Int("b", 3, "Timestamp Buffer Window")
-var destinationFlag = flag.String("d", "result.txt", "Result destination")
-
-//Converts seconds to hours:minutes:seconds
-func convertSeconds(seconds int) string {
-	if seconds < 0 {
-		seconds = 0
-	}
-
-	hours := seconds / 3600
-	minutes := seconds / 60
-	seconds = seconds - minutes*60 - hours*3600
-	return fmt.Sprintf("%02d:%02d:%02d", hours, minutes, seconds)
-}
-
 //Parses json input, writes timestamp to file if input is registered
 func (rt *ReplayTimeStamper) handleInput(w http.ResponseWriter, req *http.Request) {
 	var event KeyEvent
@@ -66,6 +44,28 @@ func (rt *ReplayTimeStamper) handleInput(w http.ResponseWriter, req *http.Reques
 	} else {
 		fmt.Println("Unbound key:", event.Key)
 	}
+}
+
+type KeyEvent struct {
+	Title    string  `json:"title"`
+	Timestep float64 `json:"timestep"`
+	Key      string  `json:"key"`
+}
+
+var KeyCmdPathFlag = flag.String("c", "millia.txt", "Key command filename")
+var bufferFlag = flag.Int("b", 3, "Timestamp Buffer Window")
+var destinationFlag = flag.String("d", "result.txt", "Result destination")
+
+//Converts seconds to hours:minutes:seconds
+func convertSeconds(seconds int) string {
+	if seconds < 0 {
+		seconds = 0
+	}
+
+	hours := seconds / 3600
+	minutes := seconds / 60
+	seconds = seconds - minutes*60 - hours*3600
+	return fmt.Sprintf("%02d:%02d:%02d", hours, minutes, seconds)
 }
 
 func main() {
