@@ -6,4 +6,5 @@ r=round start
 j=jump
 t=throw
 i=iron savior oki
+ch=counter hit 2D
 x=DELETE
