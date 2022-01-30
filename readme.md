@@ -9,7 +9,7 @@ See keyCommands directory for examples.
 # To run
 Inside the replayTimeStamper directory, write "go run ."
 
-Use in tandem with Videobookmarker to register key presses with timestamp within youtube. 
+Use in tandem with the Videobookmarker chrome extension to register key presses with timestamp within youtube. 
 
 Get Videobookmarker here: https://github.com/Forgetfulisak/videobookmarker
 
