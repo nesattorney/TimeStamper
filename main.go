@@ -72,6 +72,7 @@ func main() {
 	flag.Parse()
 	fmt.Printf("===Using key commands from file: %s ===\n", *KeyCmdPathFlag)
 	fmt.Printf("Buffer: %d sec\n", *bufferFlag)
+	fmt.Printf("Destination: %s\n", filepath.Join("output", *destinationFlag))
 
 	//Read key commands
 	dat, err := os.ReadFile(filepath.Join("keyCommands", *KeyCmdPathFlag))
@@ -91,7 +92,7 @@ func main() {
 	}
 
 	//Create destination file
-	f, err := os.Create(*destinationFlag)
+	f, err := os.Create(filepath.Join("output", *destinationFlag))
 	if err != nil {
 		log.Panic()
 	}
