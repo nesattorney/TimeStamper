@@ -1,0 +1,23 @@
+00:01:07 - 2S blockstring
+00:01:55 - round start
+00:02:03 - throw
+00:02:05 - 5k blockstring
+00:02:09 - 2S blockstring
+00:02:14 - 5k blockstring
+00:02:15 - hook/claw
+00:02:17 - 5k blockstring
+00:02:39 - round start
+00:02:39 - far slash blockstring
+00:02:50 - 2S blockstring
+00:03:05 - far slash blockstring
+00:03:07 - throw
+00:03:22 - wall break
+00:03:26 - hook/claw
+00:03:41 - 5k blockstring
+00:03:43 - hook/claw
+00:04:10 - round start
+00:04:13 - close slash blockstring
+00:04:22 - wall break
+00:04:27 - throw
+00:04:31 - 2S blockstring
+00:04:31 - hook/claw

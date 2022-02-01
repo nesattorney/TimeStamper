@@ -104,7 +104,7 @@ func main() {
 	for k, v := range keyCommands {
 		fmt.Println(k, ":", v)
 	}
-	fmt.Println("exit", ":", "exits program")
+	fmt.Println("Escape", ":", "exits program")
 	fmt.Println("\n===Starting TimeStamper===")
 
 	rts := ReplayTimeStamper{

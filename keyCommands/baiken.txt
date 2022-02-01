@@ -1,0 +1,9 @@
+s=far slash blockstring
+l=2S blockstring
+k=5k blockstring
+c=close slash blockstring
+w=wall break
+r=round start
+t=throw
+h=hook/claw
+x=DELETE
