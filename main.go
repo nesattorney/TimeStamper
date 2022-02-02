@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"os/signal"
 	"path/filepath"
 	"strings"
 )
@@ -115,7 +116,15 @@ func main() {
 	http.HandleFunc("/", rts.handleInput)
 	go http.ListenAndServe("localhost:9393", nil)
 
-	//Exits when rts receives the Escape key as input
-	<-rts.Exit
+	// Exits when rts receives the Escape key as input
+	// Or when process is interrupted with ctrl+c
+	sig := make(chan os.Signal, 1)
+	signal.Notify(sig, os.Interrupt)
+
+	select {
+	case <-rts.Exit:
+	case <-sig:
+	}
+
 	fmt.Println("Shutting down...")
 }
