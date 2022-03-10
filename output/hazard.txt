@@ -1,0 +1,7 @@
+00:00:18 - round start
+00:00:20 - dp
+00:00:23 - slash blockstring
+00:00:33 - wall break
+00:00:36 - dp
+00:00:43 - overhead
+00:00:49 - round start

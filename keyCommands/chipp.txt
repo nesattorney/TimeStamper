@@ -1,0 +1,9 @@
+s=slash blockstring
+d=dp
+w=wall break
+r=round start
+e=rekka blockstring
+k=kd
+t=throw
+o=overhead
+x=DELETE

@@ -1,0 +1,82 @@
+00:00:51 - rekka blockstring
+00:01:02 - kd
+00:01:10 - wall break
+00:01:16 - dp
+00:01:14 - DELETE
+00:01:16 - kd
+00:01:41 - round start
+00:01:43 - kd
+00:01:45 - slash blockstring
+00:01:55 - rekka blockstring
+00:02:04 - kd
+00:02:20 - round start
+00:02:23 - kd
+00:02:25 - slash blockstring
+00:02:38 - wall break
+00:02:57 - round start
+00:02:59 - rekka blockstring
+00:03:04 - kd
+00:03:08 - kd
+00:03:14 - rekka blockstring
+00:03:23 - dp
+00:03:23 - throw
+00:03:29 - DELETE
+00:03:35 - round start
+00:03:44 - wall break
+00:03:52 - kd
+00:03:54 - rekka blockstring
+00:03:58 - rekka blockstring
+00:04:10 - rekka blockstring
+00:04:14 - overhead
+00:05:36 - round start
+00:05:45 - kd
+00:05:49 - throw
+00:05:53 - throw
+00:05:54 - overhead
+00:06:03 - round start
+00:06:07 - kd
+00:06:09 - slash blockstring
+00:06:10 - rekka blockstring
+00:06:22 - rekka blockstring
+00:06:29 - slash blockstring
+00:06:33 - kd
+00:06:40 - rekka blockstring
+00:06:42 - overhead
+00:06:48 - rekka blockstring
+00:06:50 - overhead
+00:06:48 - DELETE
+00:06:51 - slash blockstring
+00:07:10 - round start
+00:07:11 - kd
+00:07:22 - kd
+00:07:29 - kd
+00:07:29 - overhead
+00:07:34 - rekka blockstring
+00:07:50 - round start
+00:07:52 - kd
+00:08:20 - round start
+00:08:27 - slash blockstring
+00:08:30 - kd
+00:08:32 - slash blockstring
+00:08:41 - kd
+00:08:47 - overhead
+00:09:13 - round start
+00:09:28 - kd
+00:09:32 - overhead
+00:09:43 - rekka blockstring
+00:09:51 - wall break
+00:09:56 - rekka blockstring
+00:10:03 - round start
+00:10:07 - kd
+00:10:10 - slash blockstring
+00:10:20 - kd
+00:10:22 - slash blockstring
+00:10:30 - kd
+00:10:32 - slash blockstring
+00:10:52 - round start
+00:10:57 - kd
+00:11:11 - rekka blockstring
+00:11:14 - slash blockstring
+00:11:17 - slash blockstring
+00:11:36 - kd
+00:11:45 - kd

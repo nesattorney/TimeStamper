@@ -1,0 +1,5 @@
+t=throw
+g=got hit
+b=close clash blockstring
+c=cornered
+z=dropped combo

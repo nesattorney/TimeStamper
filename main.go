@@ -18,6 +18,7 @@ type ReplayTimeStamper struct {
 	Cmds       map[string]string
 	OutputFile *os.File
 	Exit       chan bool
+	TimeStamps map[string][]string
 }
 
 //Parses json input, writes timestamp to file if input is registered
@@ -33,18 +34,27 @@ func (rt *ReplayTimeStamper) handleInput(w http.ResponseWriter, req *http.Reques
 	}
 
 	description, ok := rt.Cmds[event.Key]
-
+	var timeStamp string
 	if ok {
 		seconds := int(event.Timestep) - int(rt.Buffer)
-		timeStamp := convertSeconds(seconds)
+		timeStamp = convertSeconds(seconds)
 		output := fmt.Sprint(timeStamp, " - ", description)
 		fmt.Println(output)
 		rt.OutputFile.WriteString(output + "\n")
 	} else if event.Key == "Escape" {
 		rt.Exit <- true
+		return
 	} else {
 		fmt.Println("Unbound key:", event.Key)
+		return
 	}
+
+	currentTimeStamps, ok := rt.TimeStamps[description]
+	if !ok {
+		currentTimeStamps = make([]string, 0)
+	}
+	currentTimeStamps = append(currentTimeStamps, timeStamp)
+	rt.TimeStamps[description] = currentTimeStamps
 }
 
 type KeyEvent struct {
@@ -69,6 +79,24 @@ func convertSeconds(seconds int) string {
 	return fmt.Sprintf("%02d:%02d:%02d", hours, minutes, seconds)
 }
 
+//Formats the output such that timestamps are sorted by type
+func prettyPrint(rts ReplayTimeStamper) {
+	//Create destination file
+	fpretty, err := os.Create(filepath.Join("output", "pretty"+*destinationFlag))
+	if err != nil {
+		log.Panic()
+	}
+	defer fpretty.Close()
+
+	for k, v := range rts.TimeStamps {
+		fpretty.WriteString("=====" + k + "=====\n")
+		for _, line := range v {
+			fpretty.WriteString(line + "\n")
+		}
+		fpretty.WriteString("\n")
+	}
+}
+
 func main() {
 	flag.Parse()
 	fmt.Printf("===Using key commands from file: %s ===\n", *KeyCmdPathFlag)
@@ -85,6 +113,8 @@ func main() {
 	//Add them to map with Key=keybind, Value=TimestampDescription
 	inputLines := strings.Split(string(dat), "\n")
 	for _, line := range inputLines {
+		line = strings.TrimSuffix(line, "\n")
+		line = strings.TrimSuffix(line, "\r")
 		command := strings.Split(line, "=")
 		if len(command) != 2 {
 			log.Panic("Invalid input:", command)
@@ -112,6 +142,7 @@ func main() {
 		Cmds:       keyCommands,
 		OutputFile: f,
 		Exit:       make(chan bool),
+		TimeStamps: make(map[string][]string),
 	}
 	http.HandleFunc("/", rts.handleInput)
 	go http.ListenAndServe("localhost:9393", nil)
@@ -126,5 +157,7 @@ func main() {
 	case <-sig:
 	}
 
+	//sort timestamps and write to file in a cleaner format
+	prettyPrint(rts)
 	fmt.Println("Shutting down...")
 }

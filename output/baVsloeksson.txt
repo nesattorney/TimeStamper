@@ -1,0 +1,87 @@
+00:01:56 - post claw oki
+00:02:36 - round start
+00:02:56 - hook/claw blockstring ender
+00:02:59 - throw
+00:03:13 - round start
+00:03:22 - post claw oki
+00:03:58 - round start
+00:04:03 - dropped combo
+00:04:08 - post claw oki
+00:04:10 - hook/claw blockstring ender
+00:04:30 - 2D ender
+00:04:32 - hook/claw blockstring ender
+00:04:42 - hook/claw blockstring ender
+00:04:46 - dropped combo
+00:04:49 - tatami blockstring ender
+00:04:52 - hook/claw blockstring ender
+00:05:05 - tatami blockstring ender
+00:05:09 - hook/claw blockstring ender
+00:05:18 - hook/claw blockstring ender
+00:05:26 - tatami blockstring ender
+00:05:36 - round start
+00:06:11 - tatami blockstring ender
+00:06:18 - hook/claw blockstring ender
+00:06:37 - round start
+00:06:51 - hook/claw blockstring ender
+00:06:53 - hook/claw blockstring ender
+00:06:57 - dropped combo
+00:07:24 - round start
+00:07:46 - hook/claw blockstring ender
+00:08:09 - close slash blockstring
+00:08:18 - round start
+00:08:25 - post claw oki
+00:08:26 - close slash blockstring
+00:09:22 - round start
+00:09:29 - dropped combo
+00:09:45 - round start
+00:09:50 - dropped combo
+00:10:06 - wall break
+00:10:30 - round start
+00:10:52 - throw
+00:10:58 - hook/claw blockstring ender
+00:11:04 - throw
+00:11:06 - dropped combo
+00:11:37 - round start
+00:11:40 - hook/claw blockstring ender
+00:11:45 - throw
+00:11:47 - close slash blockstring
+00:11:55 - hook/claw blockstring ender
+00:12:07 - dropped combo
+00:12:57 - round start
+00:13:24 - tatami blockstring ender
+00:13:32 - round start
+00:13:49 - dropped combo
+00:13:54 - DELETE
+00:14:03 - throw
+00:14:04 - dropped combo
+00:14:24 - round start
+00:14:46 - round start
+00:15:20 - round start
+00:15:29 - hook/claw blockstring ender
+00:15:31 - dropped combo
+00:15:49 - dropped combo
+00:15:57 - dropped combo
+00:15:58 - throw
+00:16:49 - round start
+00:16:56 - hook/claw blockstring ender
+00:17:02 - close slash blockstring
+00:17:28 - post claw oki
+00:17:35 - wall break
+00:17:52 - round start
+00:18:07 - hook/claw blockstring ender
+00:18:12 - close slash blockstring
+00:18:13 - dropped combo
+00:18:36 - round start
+00:19:07 - post claw oki
+00:19:09 - hook/claw blockstring ender
+00:19:11 - throw
+00:19:15 - post claw oki
+00:19:27 - round start
+00:19:30 - post claw oki
+00:19:34 - dropped combo
+00:19:45 - close slash blockstring
+00:19:46 - hook/claw blockstring ender
+00:19:51 - close slash blockstring
+00:20:00 - close slash blockstring
+00:20:02 - dropped combo
+00:20:35 - round start

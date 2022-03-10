@@ -1,0 +1,50 @@
+00:00:42 - got hit
+00:00:52 - got hit
+00:00:56 - cornered
+00:01:33 - got hit
+00:01:47 - got hit
+00:01:56 - got hit
+00:02:16 - cornered
+00:02:47 - got hit
+00:02:57 - got hit
+00:03:02 - got hit
+00:03:11 - got hit
+00:03:21 - got hit
+00:03:25 - got hit
+00:03:33 - got hit
+00:03:45 - cornered
+00:03:45 - got hit
+00:04:18 - got hit
+00:04:34 - got hit
+00:04:40 - cornered
+00:04:45 - got hit
+00:05:20 - cornered
+00:05:41 - cornered
+00:05:49 - got hit
+00:06:07 - got hit
+00:06:09 - cornered
+00:06:15 - got hit
+00:06:45 - got hit
+00:07:16 - got hit
+00:07:35 - cornered
+00:07:38 - got hit
+00:07:56 - got hit
+00:08:27 - got hit
+00:08:42 - got hit
+00:08:46 - cornered
+00:08:48 - got hit
+00:08:52 - got hit
+00:09:04 - got hit
+00:09:33 - got hit
+00:09:35 - cornered
+00:09:40 - got hit
+00:10:14 - got hit
+00:10:25 - got hit
+00:10:40 - got hit
+00:10:41 - cornered
+00:11:47 - got hit
+00:11:55 - got hit
+00:11:57 - cornered
+00:11:58 - cornered
+00:12:09 - dropped combo
+00:12:24 - cornered

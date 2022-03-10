@@ -1,0 +1,25 @@
+00:00:13 - close slash blockstring
+00:00:42 - round start
+00:00:46 - far slash blockstring
+00:01:03 - throw
+00:01:07 - throw
+00:01:55 - throw
+00:02:38 - far slash blockstring
+00:02:54 - round start
+00:02:58 - throw
+00:03:06 - 5k blockstring
+00:03:36 - 5k blockstring
+00:03:48 - close slash blockstring
+00:03:56 - DELETE
+00:03:47 - hook/claw
+00:04:30 - round start
+00:04:40 - close slash blockstring
+00:05:05 - round start
+00:05:11 - close slash blockstring
+00:06:00 - round start
+00:06:57 - round start
+00:07:21 - close slash blockstring
+00:08:06 - round start
+00:08:30 - close slash blockstring
+00:09:00 - round start
+00:09:26 - throw

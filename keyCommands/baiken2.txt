@@ -1,0 +1,11 @@
+f=far slash/2S blockstring
+c=close slash blockstring
+w=wall break
+r=round start
+t=throw
+h=hook/claw blockstring ender
+x=DELETE
+d=2D ender
+m=tatami blockstring ender
+z=dropped combo
+o=post claw oki
