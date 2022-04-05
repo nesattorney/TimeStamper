@@ -15,5 +15,7 @@ Get Videobookmarker here: https://github.com/Forgetfulisak/videobookmarker
 
 # Flags
 c : decides key command file to read keybindings from
+
 b : Timestamp buffer
+
 d : Output destination
