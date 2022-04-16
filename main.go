@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -24,14 +23,13 @@ type ReplayTimeStamper struct {
 //Parses json input, writes timestamp to file if input is registered
 func (rt *ReplayTimeStamper) handleInput(w http.ResponseWriter, req *http.Request) {
 	var event KeyEvent
-	data, err := ioutil.ReadAll(req.Body)
-	if err != nil {
-		log.Panic("Invalid input")
+
+	if err := json.NewDecoder(req.Body).Decode(&event); err != nil {
+		fmt.Println("Invalid input")
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
 	}
-	err = json.Unmarshal(data, &event)
-	if err != nil {
-		log.Panic("json invalid")
-	}
+	defer req.Body.Close()
 
 	description, ok := rt.Cmds[event.Key]
 	var timeStamp string
